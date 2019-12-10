@@ -18,6 +18,23 @@ function setUp() {
     // console.log(moment().format("dddd" + ", " + "MMMM Do"));
     $("#date").text(moment().format("dddd" + ", " + "MMMM Do"))
 
+    // console.log(moment().format("H"));
+    var currentHour = parseInt(moment().format("H"))
+    console.log(currentHour);
+    for (var i = 9; i < 18; i++) {
+        console.log($("#" + i).children(".col-10"));
+        if (i < currentHour) {
+            console.log("past");
+            $("#" + i).children(".col-10").children().css("background-color", "rgb(208, 208, 225)");
+        } else if (i === currentHour) {
+            console.log("present");
+            $("#" + i).children(".col-10").children().css("background-color", "rgb(255, 204, 204)");
+        } else {
+            console.log("future");
+            $("#" + i).children(".col-10").children().css("background-color", "rgb(204, 255, 204)");
+        }
+    }
+
 
 
 }
