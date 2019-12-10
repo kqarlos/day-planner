@@ -1,4 +1,7 @@
-
+//set up planner
+function setUp() {
+    
+}
 
 //Get current date and update it to the date element
 function updateDate() {
@@ -9,3 +12,5 @@ function updateDate() {
 $(".btn").on("click", function () {
     //$(this);
 });
+
+setUp();
