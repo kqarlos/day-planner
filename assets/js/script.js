@@ -10,19 +10,15 @@ function setUp() {
             var task = planner[i].task;
             $("#" + hour)[0].children[1].children[0].value = task;
         }
-        console.log($("#" + hour));
-        console.log($("#" + hour)[0]);
-
-        console.log($("#" + hour)[0].children);
-        console.log($("#" + hour)[0].children[1]);
-        console.log($("#" + hour)[0].children[1].children);
-        console.log($("#" + hour)[0].children[1].children[0]);
-        console.log($("#" + hour)[0].children[1].children[0].value);
-
-
-
-
+        // console.log($("#" + hour)[0].children[1].children[0].value);
     }
+
+    var now = moment();
+    // console.log(now);
+    // console.log(moment().format("dddd" + ", " + "MMMM Do"));
+    $("#date").text(moment().format("dddd" + ", " + "MMMM Do"))
+
+
 
 }
 
