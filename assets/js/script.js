@@ -24,13 +24,13 @@ function setUpTimedElements() {
     var currentHour = parseInt(moment().format("H"));
     //i = id and hour form elements
     for (var i = 9; i < 18; i++) {
-        console.log($("#" + i).children(".col-10"));
+        // console.log($("#" + i).children(".col-sm-10"));
         if (i < currentHour) {
-            $("#" + i).children(".col-10").children().css("background-color", "rgb(208, 208, 225)");
+            $("#" + i).children(".col-sm-10").children().css("background-color", "rgb(208, 208, 225)");
         } else if (i === currentHour) {
-            $("#" + i).children(".col-10").children().css("background-color", "rgb(255, 204, 204)");
+            $("#" + i).children(".col-sm-10").children().css("background-color", "rgb(255, 204, 204)");
         } else {
-            $("#" + i).children(".col-10").children().css("background-color", "rgb(204, 255, 204)");
+            $("#" + i).children(".col-sm-10").children().css("background-color", "rgb(204, 255, 204)");
         }
     }
 }
