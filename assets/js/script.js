@@ -76,5 +76,8 @@ function addTask(hr, input) {
     planner.push(task);
 }
 
-setUpPlanner();
-setUpTimedElements();
+//When document is ready, set up
+$(document).ready(function () {
+    setUpPlanner();
+    setUpTimedElements();
+});
