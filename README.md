@@ -1,12 +1,35 @@
 # Day Planner
 
+  ![Languages](https://img.shields.io/github/languages/count/kqarlos/day-planner)
+  ![Top Language](https://img.shields.io/github/languages/top/kqarlos/day-planner)
+  ![Code Size](https://img.shields.io/github/languages/code-size/kqarlos/day-planner)
+  ![Repo Size](https://img.shields.io/github/repo-size/kqarlos/day-planner)
+  ![Total Lines](https://img.shields.io/tokei/lines/github/kqarlos/day-planner)
+  ![Last Commit](https://img.shields.io/github/last-commit/kqarlos/day-planner)
+  ![Followers](https://img.shields.io/github/followers/kqarlos?style=social)
+
+
+## Description
+
 Poor time management can result in missed meetings and deadlines or create the appearance of unprofessionalism. A daily planner allows employees to see their day at a glance, schedule time effectively, and improve productivity. The day planner saves information to local memory and loads it every time the site is called.
 
-## Getting Started
+## Table of Contents
+
+* [Installation](#installation)
+* [Usage](#usage)
+    * [Screenshots](#screenshots)
+    * [Snippets](#snippets)
+* [Credits](#credits)
+* [License](#license)
+
+
+## Installation
 
 This application is compatible with the most commonly used web browsers.
 
-## Site Pictures
+* [See Live Site](https://kqarlos.github.io/day-planner)
+
+### Screenshots
 
 1. Site 
 
@@ -21,7 +44,7 @@ This application is compatible with the most commonly used web browsers.
 ![Color-coding](assets/images/color-coding.png)
 
 
-## Code Snippets
+### Snippets
 
 1. Set up of timed elements: This functions set ups elements suchs as the current date displayed. This is done through the Moment.js API. The date format is specified in the _format()_ method so that we get it in the form of _Day, Month DateNumber_. The _currentHour_ is retrieved and used to check against all the elements whose _id_ represents their time. During this comparison we can check wether each element's time is from the past, present or future. The _background-color_ is updated accordingly using JQuery's _.css()_ function.
 
@@ -84,7 +107,15 @@ $(".btn").on("click", function () {
     
 ```
 
-## Built With
+## Credits 
+
+### Author
+
+- Carlos Toledo: [portfolio](https://professional-portfolio2020.herokuapp.com/)
+- Github: [kqarlos](https://www.github.com/kqarlos)
+- LinkedIn: [carlos-toledo415](https://www.linkedin.com/in/carlos-toledo415/)
+
+### Built With
 
 * [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
 * [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
@@ -92,23 +123,6 @@ $(".btn").on("click", function () {
 * [Javascript](https://www.javascript.com/)
 * [Moment.js](https://momentjs.com/docs/)
 
-## Deployed Link
+## License
 
-* [See Live Site](https://kqarlos.github.io/day-planner)
-
-## Author
-
- * **Carlos Toledo** 
-
-## Links
-
-- [Link to Day Planner Site](https://github.com/kqarlos/day-planner)
-- [Link to Github](https://www.github.com/kqarlos)
-- [Link to LinkedIn](https://www.linkedin.com/in/carlos-toledo415/)
-
-
-## Acknowledgments
-
-* [W3 Schools](https://www.w3schools.com/)
-* [Bootstrap components](https://getbootstrap.com/docs/4.4/components/navbar/)
-* [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model)
+![GitHub](https://img.shields.io/github/license/kqarlos/day-planner)
