@@ -1,13 +1,16 @@
 # Day Planner
 
-  ![Languages](https://img.shields.io/github/languages/count/kqarlos/day-planner)
-  ![Top Language](https://img.shields.io/github/languages/top/kqarlos/day-planner)
-  ![Code Size](https://img.shields.io/github/languages/code-size/kqarlos/day-planner)
-  ![Repo Size](https://img.shields.io/github/repo-size/kqarlos/day-planner)
-  ![Total Lines](https://img.shields.io/tokei/lines/github/kqarlos/day-planner)
-  ![Last Commit](https://img.shields.io/github/last-commit/kqarlos/day-planner)
-  ![Followers](https://img.shields.io/github/followers/kqarlos?style=social)
-
+</br>
+<p align="center">
+    <img src="https://img.shields.io/github/languages/count/kqarlos/day-planner?style=for-the-badge" alt="Languages" />
+    <img src="https://img.shields.io/github/languages/top/kqarlos/day-planner?style=for-the-badge" alt="Top Language" />
+    <img src="https://img.shields.io/github/languages/code-size/kqarlos/day-planner?style=for-the-badge" alt="Code Size" />
+    <img src="https://img.shields.io/github/repo-size/kqarlos/day-planner?style=for-the-badge" alt="Repo Size" />   
+    <img src="https://img.shields.io/tokei/lines/github/kqarlos/day-planner?style=for-the-badge" alt="Total Lines" />   
+    <img src="https://img.shields.io/github/last-commit/kqarlos/day-planner?style=for-the-badge" alt="Last Commit" />  
+    <img src="https://img.shields.io/github/issues/kqarlos/day-planner?style=for-the-badge" alt="Issues" />  
+    <img src="https://img.shields.io/github/followers/kqarlos?style=social" alt="Followers" />  
+</p>
 
 ## Description
 
@@ -27,7 +30,11 @@ Poor time management can result in missed meetings and deadlines or create the a
 
 This application is compatible with the most commonly used web browsers.
 
-* [See Live Site](https://kqarlos.github.io/day-planner)
+<p align="center">
+    <a href="https://kqarlos.github.io/day-planner"><img src="https://img.shields.io/badge/-👉 See Live Site-success?style=for-the-badge"  alt="Live Site" /></a>
+</p>
+
+## Usage 
 
 ### Screenshots
 
@@ -117,12 +124,18 @@ $(".btn").on("click", function () {
 
 ### Built With
 
-* [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
-* [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
-* [Bootstrap](https://getbootstrap.com/)
-* [Javascript](https://www.javascript.com/)
-* [Moment.js](https://momentjs.com/docs/)
+<p align="center">
+    <a href="https://developer.mozilla.org/en-US/docs/Web/HTML"><img src="https://img.shields.io/badge/-HTML-orange?style=for-the-badge"  alt="HMTL" /></a>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS"><img src="https://img.shields.io/badge/-CSS-blue?style=for-the-badge" alt="CSS" /></a>
+    <a href="https://www.javascript.com/"><img src="https://img.shields.io/badge/-Javascript-yellow?style=for-the-badge" alt="Javascript" /></a>
+    <a href="https://getbootstrap.com/"><img src="https://img.shields.io/badge/-Bootstrap-blueviolet?style=for-the-badge" alt="Bootstrap" /></a>
+    <a href="https://momentjs.com/docs/"><img src="https://img.shields.io/badge/-Moment.js-success?style=for-the-badge" alt="Moment.js" /></a>
+    <a href="https://jquery.com/"><img src="https://img.shields.io/badge/-JQuery-blue?style=for-the-badge" alt="JQuery" /></a>
+</p>
+</br>
 
 ## License
 
-![GitHub](https://img.shields.io/github/license/kqarlos/day-planner)
+<p align="center">
+    <img align="center" src="https://img.shields.io/github/license/kqarlos/day-planner?style=for-the-badge" alt="MIT license" />
+</p>
