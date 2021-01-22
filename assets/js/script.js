@@ -7,7 +7,7 @@ function setUpPlanner() {
         for (var i = 0; i < planner.length; i++) {
             var hour = planner[i].hour;
             var task = planner[i].task;
-            $("#" + hour)[0].children[1].children[0].value = task;
+            $("#" + hour)[0].val() = task;
         }
         // console.log($("#" + hour)[0].children[1].children[0].value);
     }
@@ -26,11 +26,11 @@ function setUpTimedElements() {
     for (var i = 9; i < 18; i++) {
         // console.log($("#" + i).children(".col-sm-10"));
         if (i < currentHour) {
-            $("#" + i).children(".col-sm-10").children().css("background-color", "rgb(208, 208, 225)");
+            $("#" + i).css("background-color", "rgb(208, 208, 225)");
         } else if (i === currentHour) {
-            $("#" + i).children(".col-sm-10").children().css("background-color", "rgb(255, 204, 204)");
+            $("#" + i).css("background-color", "rgb(255, 204, 204)");
         } else {
-            $("#" + i).children(".col-sm-10").children().css("background-color", "rgb(204, 255, 204)");
+            $("#" + i).css("background-color", "rgb(204, 255, 204)");
         }
     }
 }
@@ -38,8 +38,8 @@ function setUpTimedElements() {
 //Saves task upon clicking save button
 $(".btn").on("click", function () {
     //look for id/hour and input of element.     console.log("ID of this: " +id);
-    var id = parseInt($(this).parent().parent()[0].id);
-    var input = $(this).parent()[0].previousElementSibling.childNodes[1].value;
+    var id = parseInt($(this).data("hour"));
+    var input = $(`#${id}`).val();
 
     //check if planner item is set
     if (localStorage.getItem("planner")) {
