@@ -4,9 +4,9 @@ var planner = [];
 function setUpPlanner() {
     if (localStorage.getItem("planner")) {
         planner = JSON.parse(localStorage.getItem("planner"));
-        for (var i = 0; i < planner.length; i++) {
-            var hour = planner[i].hour;
-            var task = planner[i].task;
+        for (let i = 0; i < planner.length; i++) {
+            let hour = planner[i].hour;
+            let task = planner[i].task;
             $("#" + hour).val(task);
         }
     }
@@ -16,9 +16,9 @@ function setUpPlanner() {
 //Sets up the color coding of each text area according to the current time.
 function setUpTimedElements() {
     updateDate();
-    var currentHour = parseInt(moment().format("H"));
+    let currentHour = parseInt(moment().format("H"));
     //i = id and hour form elements
-    for (var i = 9; i < 18; i++) {
+    for (let i = 9; i < 18; i++) {
         if (i < currentHour) {
             $("#" + i).css("background-color", "rgb(208, 208, 225)");
         } else if (i === currentHour) {
@@ -29,39 +29,31 @@ function setUpTimedElements() {
     }
 }
 
+// Updates date element with current time
 function updateDate() {
     $("#date").text(moment().format("dddd, MMMM Do - h:mm:ss a"));
 }
 
 //Saves task upon clicking save button
 $(".btn").on("click", function () {
-    //look for id/hour and input of element.     console.log("ID of this: " +id);
+    //look for id/hour and input of element. 
     var id = parseInt($(this).data("hour"));
     var input = $(`#${id}`).val();
 
-    //check if planner item is set
-    if (localStorage.getItem("planner")) {
-        //if planner is set get it and check if we need to create a new task or update an existing one; console.log(planner);   
-
-        planner = JSON.parse(localStorage.getItem("planner"));
-        var index = -1;
-        for (var i = 0; i < planner.length; i++) {
-            //if id is found in planner then we need to update task
-            if (planner[i].hour === id) {
-                index = i;
-            }
+    // Assume task is new
+    var newTask = true;
+    for (var i = 0; i < planner.length; i++) {
+        //if id is found in planner then is not a new task and we need to update task
+        if (planner[i].hour === id) {
+            newTask = false;
+            planner[i].task = input;
         }
-        //if index is -1 id was not found and we need to create a new task to push
-        //if index is found just update task on planner variable;    console.log("Index: " + index);
-        if (index === -1) {
-            addTask(id, input);
-        } else {
-            planner[index].task = input;
-        }
-    } else {
+    }
+    //if it is a new task update on planner
+    if (newTask) {
         addTask(id, input);
     }
-    //update planner iten on local storage
+    //update planner item on local storage
     localStorage.setItem("planner", JSON.stringify(planner));
 });
 
