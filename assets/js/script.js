@@ -7,7 +7,7 @@ function setUpPlanner() {
         for (var i = 0; i < planner.length; i++) {
             var hour = planner[i].hour;
             var task = planner[i].task;
-            $("#" + hour)[0].val() = task;
+            $("#" + hour).val(task);
         }
         // console.log($("#" + hour)[0].children[1].children[0].value);
     }
@@ -22,6 +22,7 @@ function setUpTimedElements() {
     $("#date").text(moment().format("dddd" + ", " + "MMMM Do"))
     // console.log(moment().format("H"));
     var currentHour = parseInt(moment().format("H"));
+    currentHour -= 12;
     //i = id and hour form elements
     for (var i = 9; i < 18; i++) {
         // console.log($("#" + i).children(".col-sm-10"));
