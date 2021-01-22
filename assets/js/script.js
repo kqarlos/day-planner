@@ -9,23 +9,16 @@ function setUpPlanner() {
             var task = planner[i].task;
             $("#" + hour).val(task);
         }
-        // console.log($("#" + hour)[0].children[1].children[0].value);
     }
 }
 
 //Sets up time dependen elements. The current date is set up using moment.js
 //Sets up the color coding of each text area according to the current time.
 function setUpTimedElements() {
-    var now = moment();
-    // console.log(now);
-    // console.log(moment().format("dddd" + ", " + "MMMM Do"));
-    $("#date").text(moment().format("dddd" + ", " + "MMMM Do"))
-    // console.log(moment().format("H"));
+    updateDate();
     var currentHour = parseInt(moment().format("H"));
-    currentHour -= 12;
     //i = id and hour form elements
     for (var i = 9; i < 18; i++) {
-        // console.log($("#" + i).children(".col-sm-10"));
         if (i < currentHour) {
             $("#" + i).css("background-color", "rgb(208, 208, 225)");
         } else if (i === currentHour) {
@@ -34,6 +27,10 @@ function setUpTimedElements() {
             $("#" + i).css("background-color", "rgb(204, 255, 204)");
         }
     }
+}
+
+function updateDate() {
+    $("#date").text(moment().format("dddd, MMMM Do - h:mm:ss a"));
 }
 
 //Saves task upon clicking save button
@@ -81,4 +78,5 @@ function addTask(hr, input) {
 $(document).ready(function () {
     setUpPlanner();
     setUpTimedElements();
+    setInterval(updateDate, 1000);
 });
