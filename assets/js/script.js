@@ -16,17 +16,22 @@ function setUpPlanner() {
 //Sets up the color coding of each text area according to the current time.
 function setUpTimedElements() {
     updateDate();
+    renderTextareaBackground();
+}
+
+// Gets each text area and using the curetn time determines its background color by updating it class list.
+function renderTextareaBackground() {
     let currentHour = parseInt(moment().format("H"));
-    //i = id and hour form elements
-    for (let i = 9; i < 18; i++) {
-        if (i < currentHour) {
-            $("#" + i).css("background-color", "rgb(208, 208, 225)");
-        } else if (i === currentHour) {
-            $("#" + i).css("background-color", "rgb(255, 204, 204)");
+    $("textarea.form-control").each(function (i) {
+        let id = parseInt($(this).attr("id"));
+        if (id < currentHour) {
+            $(this).css("background-color", "rgb(208, 208, 225)");
+        } else if (id === currentHour) {
+            $(this).css("background-color", "rgb(255, 204, 204)");
         } else {
-            $("#" + i).css("background-color", "rgb(204, 255, 204)");
+            $(this).css("background-color", "rgb(204, 255, 204)");
         }
-    }
+    });
 }
 
 // Updates date element with current time
@@ -70,5 +75,7 @@ function addTask(hr, input) {
 $(document).ready(function () {
     setUpPlanner();
     setUpTimedElements();
+    // Check time sensitive elemetns using intervals
     setInterval(updateDate, 1000);
+    setInterval(renderTextareaBackground, 60 * 1000);
 });
