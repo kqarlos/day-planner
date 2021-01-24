@@ -18,15 +18,17 @@ function setUpTimedElements() {
     updateDate();
     let currentHour = parseInt(moment().format("H"));
     //i = id and hour form elements
-    for (let i = 9; i < 18; i++) {
-        if (i < currentHour) {
-            $("#" + i).css("background-color", "rgb(208, 208, 225)");
-        } else if (i === currentHour) {
-            $("#" + i).css("background-color", "rgb(255, 204, 204)");
+    $("textarea.form-control").each(function (i) {
+        console.log()
+        let id = parseInt($(this).attr("id"));
+        if (id < currentHour) {
+            $(this).css("background-color", "rgb(208, 208, 225)");
+        } else if (id === currentHour) {
+            $(this).css("background-color", "rgb(255, 204, 204)");
         } else {
-            $("#" + i).css("background-color", "rgb(204, 255, 204)");
+            $(this).css("background-color", "rgb(204, 255, 204)");
         }
-    }
+    });
 }
 
 // Updates date element with current time
