@@ -75,5 +75,7 @@ function addTask(hr, input) {
 $(document).ready(function () {
     setUpPlanner();
     setUpTimedElements();
+    // Check time sensitive elemetns using intervals
     setInterval(updateDate, 1000);
+    setInterval(renderTextareaBackground, 60 * 1000);
 });
