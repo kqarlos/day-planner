@@ -16,10 +16,13 @@ function setUpPlanner() {
 //Sets up the color coding of each text area according to the current time.
 function setUpTimedElements() {
     updateDate();
+    renderTextareaBackground();
+}
+
+// Gets each text area and using the curetn time determines its background color by updating it class list.
+function renderTextareaBackground() {
     let currentHour = parseInt(moment().format("H"));
-    //i = id and hour form elements
     $("textarea.form-control").each(function (i) {
-        console.log()
         let id = parseInt($(this).attr("id"));
         if (id < currentHour) {
             $(this).css("background-color", "rgb(208, 208, 225)");
