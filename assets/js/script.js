@@ -2,13 +2,11 @@ var planner = [];
 
 //sets up planner with any tasks stored in local memory if there are any
 function setUpPlanner() {
-    if (localStorage.getItem("planner")) {
-        planner = JSON.parse(localStorage.getItem("planner"));
-        for (let i = 0; i < planner.length; i++) {
-            let hour = planner[i].hour;
-            let task = planner[i].task;
-            $("#" + hour).val(task);
-        }
+    planner = JSON.parse(localStorage.getItem("planner")) || [];
+    for (let i = 0; i < planner.length; i++) {
+        let hour = planner[i].hour;
+        let task = planner[i].task;
+        $(`#${hour}`).val(task);
     }
 }
 
@@ -40,13 +38,13 @@ function updateDate() {
 }
 
 //Saves task upon clicking save button
-$(".btn").on("click", function () {
+$("button.btn").on("click", function () {
     //look for id/hour and input of element. 
-    var id = parseInt($(this).data("hour"));
-    var input = $(`#${id}`).val();
+    let id = parseInt($(this).data("hour"));
+    let input = $(`#${id}`).val();
 
     // Assume task is new
-    var newTask = true;
+    let newTask = true;
     for (var i = 0; i < planner.length; i++) {
         //if id is found in planner then is not a new task and we need to update task
         if (planner[i].hour === id) {
@@ -64,7 +62,7 @@ $(".btn").on("click", function () {
 
 //Add a task consisting of an hour and an input
 function addTask(hr, input) {
-    var task = {
+    let task = {
         hour: hr,
         task: input
     }
