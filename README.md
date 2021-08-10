@@ -115,8 +115,8 @@ This application is compatible with the most commonly used web browsers.
 
 ### Author
 
-- Carlos Toledo: [portfolio](https://kqarlos.github.io)
-- Github: [kqarlos](https://www.github.com/kqarlos)
+- 💼 Carlos Toledo: [portfolio](https://kqarlos.github.io)
+- :octocat: Github: [kqarlos](https://www.github.com/kqarlos)
 - LinkedIn: [carlos-toledo415](https://www.linkedin.com/in/carlos-toledo415/)
 
 ### Built With
